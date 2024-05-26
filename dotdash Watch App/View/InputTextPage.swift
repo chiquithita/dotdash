@@ -1,18 +1,48 @@
-//
-//  InputTextPage.swift
-//  dotdash Watch App
-//
-//  Created by Elizabeth Chiquithita Bunga Ariona Chriska on 21/05/24.
-//
-
 import SwiftUI
 
 struct InputTextPage: View {
+    @State private var inputText: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack{
+                Image("background2")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    TextField("Enter text", text: $inputText)
+                        .padding()
+                        .background(Color.gray.opacity(0))
+                        .cornerRadius(8)
+                        .onChange(of: inputText) { newValue in
+                            handleTextChange(newValue)
+                        }
+                    
+                    NavigationLink(destination: NextPage(inputText: inputText)) {
+                        Text("Morse Code")
+                            .font(.headline)
+                            .padding()
+                            .background(Color.color1)
+                            .opacity(1.0)// Correct background color
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                .padding()
+            }
+        }
+    }
+
+    func handleTextChange(_ text: String) {
+        // You can handle text changes here if needed
     }
 }
 
-#Preview {
-    InputTextPage()
+struct InputTextPage_Preview: PreviewProvider {
+    static var previews: some View {
+        InputTextPage()
+    }
 }

@@ -15,6 +15,11 @@
 		F4077C1D2BFAE22500BF6978 /* dotdash_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4077C1C2BFAE22500BF6978 /* dotdash_Watch_AppTests.swift */; };
 		F4077C272BFAE22500BF6978 /* dotdash_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4077C262BFAE22500BF6978 /* dotdash_Watch_AppUITests.swift */; };
 		F4077C292BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4077C282BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift */; };
+		F42C3A502BFB2E8A00A097AE /* morseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A4F2BFB2E8A00A097AE /* morseData.swift */; };
+		F42C3A522BFB304800A097AE /* haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A512BFB304800A097AE /* haptics.swift */; };
+		F42C3A552BFB31A400A097AE /* MorsePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A542BFB31A400A097AE /* MorsePage.swift */; };
+		F4DDB0212BFC8F7E001F5D20 /* NextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */; };
+		F4DDB0232BFCA33B001F5D20 /* InputTextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		F4077C222BFAE22500BF6978 /* dotdash Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dotdash Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4077C262BFAE22500BF6978 /* dotdash_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotdash_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		F4077C282BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotdash_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F42C3A4F2BFB2E8A00A097AE /* morseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morseData.swift; sourceTree = "<group>"; };
+		F42C3A512BFB304800A097AE /* haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = haptics.swift; sourceTree = "<group>"; };
+		F42C3A542BFB31A400A097AE /* MorsePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorsePage.swift; sourceTree = "<group>"; };
+		F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPage.swift; sourceTree = "<group>"; };
+		F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,8 @@
 		F4077C0A2BFAE22400BF6978 /* dotdash Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F42C3A532BFB315800A097AE /* View */,
+				F42C3A4E2BFB2E6400A097AE /* Model */,
 				F4077C0B2BFAE22400BF6978 /* dotdashApp.swift */,
 				F4077C0D2BFAE22400BF6978 /* ContentView.swift */,
 				F4077C0F2BFAE22500BF6978 /* Assets.xcassets */,
@@ -149,6 +161,25 @@
 				F4077C282BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "dotdash Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		F42C3A4E2BFB2E6400A097AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F42C3A4F2BFB2E8A00A097AE /* morseData.swift */,
+				F42C3A512BFB304800A097AE /* haptics.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F42C3A532BFB315800A097AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F42C3A542BFB31A400A097AE /* MorsePage.swift */,
+				F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */,
+				F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42C3A522BFB304800A097AE /* haptics.swift in Sources */,
+				F42C3A552BFB31A400A097AE /* MorsePage.swift in Sources */,
+				F42C3A502BFB2E8A00A097AE /* morseData.swift in Sources */,
+				F4DDB0212BFC8F7E001F5D20 /* NextPage.swift in Sources */,
 				F4077C0E2BFAE22400BF6978 /* ContentView.swift in Sources */,
+				F4DDB0232BFCA33B001F5D20 /* InputTextPage.swift in Sources */,
 				F4077C0C2BFAE22400BF6978 /* dotdashApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"dotdash Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 69AY4NPHYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = dotdash;
@@ -503,6 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"dotdash Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 69AY4NPHYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = dotdash;
@@ -531,6 +569,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69AY4NPHYL;
 				INFOPLIST_KEY_CFBundleDisplayName = dotdash;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Me.dotdash;
@@ -546,6 +585,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69AY4NPHYL;
 				INFOPLIST_KEY_CFBundleDisplayName = dotdash;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Me.dotdash;

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WatchKit
 
 // Morse code dictionary
 let morseCode: [Character: String] = [
@@ -13,8 +14,14 @@ let morseCode: [Character: String] = [
     "G": "--.", "H": "....", "I": "..", "J": ".---", "K": "-.-", "L": ".-..",
     "M": "--", "N": "-.", "O": "---", "P": ".--.", "Q": "--.-", "R": ".-.",
     "S": "...", "T": "-", "U": "..-", "V": "...-", "W": ".--", "X": "-..-",
-    "Y": "-.--", "Z": "--.."
+    "Y": "-.--", "Z": "--..",
+    "a": ".-", "b": "-...", "c": "-.-.", "d": "-..", "e": ".", "f": "..-.",
+    "g": "--.", "h": "....", "i": "..", "j": ".---", "k": "-.-", "l": ".-..",
+    "m": "--", "n": "-.", "o": "---", "p": ".--.", "q": "--.-", "r": ".-.",
+    "s": "...", "t": "-", "u": "..-", "v": "...-", "w": ".--", "x": "-..-",
+    "y": "-.--", "z": "--.."
 ]
+
 
 // Function to convert a string to Morse code
 func stringToMorse(_ input: String) -> String {
@@ -23,40 +30,12 @@ func stringToMorse(_ input: String) -> String {
     for character in input.uppercased() {
         if let morseChar = morseCode[character] {
             morseString += morseChar + " "
-        } else {
-            // For spaces or unsupported characters, add a space
-            morseString += " "
+        } else if character == " " {
+            morseString += "   " // Three spaces to separate words
         }
     }
-    
+    print(morseString)
     return morseString.trimmingCharacters(in: .whitespaces)
 }
 
-// Function to convert Morse code to a string
-func morseToString(_ input: String) -> String {
-    let morseWords = input.components(separatedBy: "   ") // Separate words by three spaces
-    var decodedMessage = ""
-    
-    for morseWord in morseWords {
-        let morseChars = morseWord.components(separatedBy: " ") // Separate letters by a space
-        for morseChar in morseChars {
-            if let decodedChar = morseCode.first(where: { $0.value == morseChar })?.key {
-                decodedMessage.append(decodedChar)
-            } else {
-                // For unsupported Morse sequences, add a question mark
-                decodedMessage.append("?")
-            }
-        }
-        decodedMessage.append(" ") // Add a space between words
-    }
-    
-    return decodedMessage.trimmingCharacters(in: .whitespaces)
-}
 
-// Example usage
-let text = "Hello World"
-let morse = stringToMorse(text)
-//print("Morse code: \(morse)")
-
-let decodedText = morseToString(morse)
-//print("Decoded text: \(decodedText)")
