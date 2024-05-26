@@ -8,7 +8,7 @@
 import Foundation
 import WatchKit
 
-// Morse code dictionary
+
 let morseCode: [Character: String] = [
     "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".", "F": "..-.",
     "G": "--.", "H": "....", "I": "..", "J": ".---", "K": "-.-", "L": ".-..",
@@ -23,7 +23,7 @@ let morseCode: [Character: String] = [
 ]
 
 
-// Function to convert a string to Morse code
+
 func stringToMorse(_ input: String) -> String {
     var morseString = ""
     
@@ -31,7 +31,7 @@ func stringToMorse(_ input: String) -> String {
         if let morseChar = morseCode[character] {
             morseString += morseChar + " "
         } else if character == " " {
-            morseString += "   " // Three spaces to separate words
+            morseString += "   " 
         }
     }
     print(morseString)

@@ -17,7 +17,6 @@
 		F4077C292BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4077C282BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift */; };
 		F42C3A502BFB2E8A00A097AE /* morseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A4F2BFB2E8A00A097AE /* morseData.swift */; };
 		F42C3A522BFB304800A097AE /* haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A512BFB304800A097AE /* haptics.swift */; };
-		F42C3A552BFB31A400A097AE /* MorsePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C3A542BFB31A400A097AE /* MorsePage.swift */; };
 		F4DDB0212BFC8F7E001F5D20 /* NextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */; };
 		F4DDB0232BFCA33B001F5D20 /* InputTextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +73,6 @@
 		F4077C282BFAE22500BF6978 /* dotdash_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotdash_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F42C3A4F2BFB2E8A00A097AE /* morseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morseData.swift; sourceTree = "<group>"; };
 		F42C3A512BFB304800A097AE /* haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = haptics.swift; sourceTree = "<group>"; };
-		F42C3A542BFB31A400A097AE /* MorsePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorsePage.swift; sourceTree = "<group>"; };
 		F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPage.swift; sourceTree = "<group>"; };
 		F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +173,6 @@
 		F42C3A532BFB315800A097AE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F42C3A542BFB31A400A097AE /* MorsePage.swift */,
 				F4DDB0202BFC8F7E001F5D20 /* NextPage.swift */,
 				F4DDB0222BFCA33B001F5D20 /* InputTextPage.swift */,
 			);
@@ -341,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42C3A522BFB304800A097AE /* haptics.swift in Sources */,
-				F42C3A552BFB31A400A097AE /* MorsePage.swift in Sources */,
 				F42C3A502BFB2E8A00A097AE /* morseData.swift in Sources */,
 				F4DDB0212BFC8F7E001F5D20 /* NextPage.swift in Sources */,
 				F4077C0E2BFAE22400BF6978 /* ContentView.swift in Sources */,

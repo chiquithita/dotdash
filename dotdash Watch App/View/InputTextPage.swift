@@ -25,7 +25,7 @@ struct InputTextPage: View {
                             .font(.headline)
                             .padding()
                             .background(Color.color1)
-                            .opacity(1.0)// Correct background color
+                            .opacity(1.0)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -37,7 +37,6 @@ struct InputTextPage: View {
     }
 
     func handleTextChange(_ text: String) {
-        // You can handle text changes here if needed
     }
 }
 

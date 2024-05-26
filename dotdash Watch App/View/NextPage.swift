@@ -10,7 +10,6 @@ struct NextPage: View {
     var body: some View {
         
         ZStack {
-//             Background image
             Image("background2")
                 .resizable()
                 .scaledToFill()
@@ -79,7 +78,7 @@ struct NextPage: View {
         }
     }
     
-    // Function to trigger haptic feedback for Morse code
+   
     func playMorseHaptics(for text: String, callback: @escaping (String) -> Void ){
         let morse = stringToMorse(text)
         let hapticDevice = WKInterfaceDevice.current()
@@ -92,23 +91,23 @@ struct NextPage: View {
             callback(String(textArray[indexText]))
             switch char {
             case ".":
-                hapticDevice.play(.start) // Stronger haptic for dot
-                usleep(750_000) // 0.75 second
+                hapticDevice.play(.start)
+                usleep(750_000)
             case "-":
-                hapticDevice.play(.success) // Stronger haptic for dash
-                usleep(750_000) // 0.75 second
+                hapticDevice.play(.success)
+                usleep(750_000)
             case " ":
                 if index + 1 < morseCharacters.count && morseCharacters[index + 1] == " " {
                     if index + 2 < morseCharacters.count && morseCharacters[index + 2] == " " {
-                        // Add a longer pause between words (3 spaces detected)
-                        usleep(500_000) // 1.5 seconds
+                       
+                        usleep(500_000)
                         continue
                     }
-                    // Skip additional spaces between words
+                  
                     continue
                 } else {
-                    // Add a pause between letters
-                    usleep(500_000) // 1 second
+                    
+                    usleep(500_000) 
                     indexText += 1
                 }
             default:

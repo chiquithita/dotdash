@@ -13,7 +13,7 @@ func playHaptic(_ type: WKHapticType) {
 }
 
 func handleTextChange(_ text: String) {
-    // Trigger haptic feedback when text length is exactly 5 characters
+    
     if text.count == 5 {
         playHaptic(.success)
     }
